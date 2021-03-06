@@ -1,9 +1,11 @@
 package lk.cerberus.citizenlocation.repository;
 
 import lk.cerberus.citizenlocation.entity.Citizen;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-@Repository
-public interface CitizenRepository extends JpaRepository<Citizen, String> {
+public interface CitizenRepository extends CrudRepository<Citizen, String> {
+
+//    Citizen findByNIC(String nic);
+//
+//    List<Citizen> findAll();
 }

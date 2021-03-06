@@ -1,16 +1,18 @@
 package lk.cerberus.citizenlocation.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "citizen")
 public class Citizen {
 
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private long Id;
+
     @Id
+    @Column(length = 10, unique = true, updatable = false, nullable = false)
     private String NIC;
 
     @Column(name = "name")
@@ -58,6 +60,10 @@ public class Citizen {
 
     public String getNIC() {
         return NIC;
+    }
+
+    public void setNIC(String NIC) {
+        this.NIC = NIC;
     }
 
     public String getC_name() {
@@ -132,3 +138,4 @@ public class Citizen {
         this.health_status = health_status;
     }
 }
+
