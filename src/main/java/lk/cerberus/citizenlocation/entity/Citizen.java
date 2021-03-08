@@ -6,11 +6,6 @@ import javax.persistence.*;
 @Table(name = "citizen")
 public class Citizen {
 
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
-//    private long Id;
-
     @Id
     @Column(length = 10, unique = true, updatable = false, nullable = false)
     private String NIC;

@@ -15,6 +15,8 @@ public class CitizenService {
     @Autowired
     public CitizenRepository citizenRepository;
 
+    //Todo: add a service to update only selected fields only in a record -> examine the JPA Connection controller
+
     public List<Citizen> getAllCitizen() {
         List<Citizen> citizens = new ArrayList<>();
         citizenRepository.findAll().forEach(citizens::add);
@@ -36,4 +38,5 @@ public class CitizenService {
     public void deleteCitizen(String nic) {
         citizenRepository.deleteById(nic);
     }
+
 }
